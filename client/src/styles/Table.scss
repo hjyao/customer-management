@@ -1,0 +1,56 @@
+@import 'core-varibles.scss';
+
+.table {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+
+    .header, .body-row {
+        div, input {
+            flex: 1;
+            font-size: 1rem;
+            line-height: 1.5;
+            min-width: 30px;
+            overflow: hidden;
+            padding: .75rem;
+        }
+    }
+
+    .header {
+        background-color: $black;
+        color: $white;
+        display: flex;
+
+        &-title {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        &-sort {
+            padding-left: 10px;
+            width: 12px;
+        }
+    }
+
+    .body {
+        &-row {
+            border-bottom: 1px solid $grey;
+            color: $black;
+            display: flex;
+        }
+
+        .filter {
+            background-color: $grey;
+            border: 0;
+            font-weight: 100;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    input:focus {
+        outline: none;
+    }
+}

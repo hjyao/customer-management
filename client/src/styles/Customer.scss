@@ -1,0 +1,133 @@
+@import 'neat';
+@import 'core-varibles.scss';
+
+$customer-grid: (
+    columns: 1
+);
+
+$customer-grid-tablet: (
+    columns: 5,
+    media: "(min-width: 768px)",
+);
+
+.customer {
+    @include grid-container;
+    @include grid-media($customer-grid-tablet) {
+        padding: 0 150px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    color: $black;
+    font-size: 1rem;
+    padding: 0 30px;
+
+
+    &-form {
+        @include grid-container;
+
+        border: .2rem solid $grey;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1.5rem;
+
+        &-side {
+            @include grid-column(1, $customer-grid);
+            @include grid-media($customer-grid-tablet) {
+                @include grid-column(2);
+            }
+
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+
+            label {
+                padding-bottom: .75rem;
+            }
+            label span:first-child {
+                padding-right: .75rem;
+            }
+        }
+
+        &-main {
+            @include grid-column(1, $customer-grid);
+            @include grid-media($customer-grid-tablet) {
+                @include grid-column(3);
+            }
+
+            &-note {
+                display: flex;
+                flex-direction: row;
+                padding: .3rem 0;
+
+                &-input {
+                    background-color: $grey;
+                    border: 0;
+                    flex: 7;
+                    font-size: .9rem;
+                    font-weight: 200;
+                    line-height: 1.5;
+                    margin-right: 16px;
+                    padding-left: 10px;
+                }
+
+                &-remove {
+                    background-color: $red;
+                    border: 0;
+                    color: $white;
+                    cursor: pointer;
+                    flex: 1;
+                    font-weight: bold;
+                }
+            }
+
+            .add-button {
+                border: 0;
+                color: $blue;
+                cursor: pointer;
+                font-size: .8rem;
+                margin: .3rem 0;
+                padding-left: 0;
+            }
+
+
+        }
+
+        &-submission {
+            @include grid-column(1, $customer-grid);
+            padding-top: 1.2rem;
+
+            input {
+                background-color: $black;
+                border: 0;
+                color: $white;
+                font-size: 1rem;
+                font-weight: bold;
+                line-height: 2;
+                width: 10rem;
+            }
+
+            input[disabled] {
+                background-color: $dark-grey;
+            }
+
+            &-success {
+                animation: fadeOut 5s;
+                color: $green;
+                display: inline;
+                opacity: 0;
+                padding-left: 1rem;
+            }
+        }
+    }
+
+    input:focus,
+    select:focus,
+    button:focus {
+        outline: none;
+    }
+}
+
+

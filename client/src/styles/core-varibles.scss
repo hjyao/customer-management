@@ -1,0 +1,17 @@
+$grey: #E9ECEF;
+$dark-grey: #A9A9A9;
+$black: #212529;
+$red: #DC3545;
+$blue: #007BFF;
+$green: #28A745;
+$white: #FFF;
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

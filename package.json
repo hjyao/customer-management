@@ -1,0 +1,25 @@
+{
+  "name": "customer-management",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "up-migration": "cd db-migrations && migrate-mongo up",
+    "down-migration": "cd db-migrations && migrate-mongo down",
+    "api": "npm run up-migration; PORT=3001 node ./bin/www",
+    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha test/**/*.test.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "mongoose": "^5.2.8",
+    "morgan": "~1.9.0"
+  },
+  "devDependencies": {
+    "expect": "^23.5.0",
+    "mocha": "^5.2.0",
+    "supertest": "^3.1.0"
+  }
+}

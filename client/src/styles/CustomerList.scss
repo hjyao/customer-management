@@ -1,0 +1,29 @@
+@import 'neat';
+
+$customer-list-grid: (
+    columns: 1,
+    gutter: 1rem
+);
+
+$customer-list-grid-tablet: (
+    columns: 1,
+    gutter: 8rem,
+    media: "(min-width: 768px)",
+);
+
+.customer-list {
+    @include grid-container;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+.customer-list-hero {
+    @include grid-column(1, $customer-list-grid);
+    @include grid-media($customer-list-grid-tablet) {
+        @include grid-column(1, $customer-list-grid-tablet);
+    }
+
+    margin-bottom: 4rem;
+}
