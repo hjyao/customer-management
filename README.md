@@ -23,10 +23,10 @@
 
 ### Express API:
 * can be found in ```routes/customers``` and ```src/controller/customers```
-   **GET   /customers**          - retrieve all customers with limited fields
-   **GET   /customers/:id**      - retrieve specific customer data
-   **PATCH /customers/:id**      - patch update specific customer data
-   **POST  /customers**          - create customer
+- **GET   /customers**          - retrieve all customers with limited fields
+- **GET   /customers/:id**      - retrieve specific customer data
+- **PATCH /customers/:id**      - patch update specific customer data
+- **POST  /customers**          - create customer
 
 * by the way, all frontend code can be found under ```/client```
 
